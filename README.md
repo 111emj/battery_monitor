@@ -23,4 +23,4 @@ cd battery_monitor
 cargo build --release
 ```
 
-Binary will be placed at `target/release/battery\_monitor`
+Binary will be placed at `target/release/battery_monitor`
