@@ -59,8 +59,8 @@ fn get_battery() -> AcpiOutput {
 
     let expected_time = expected_time_matcher
         .find(&acpi_output)
-        .expect("Failed to parse acpi output for percentage")
-        .as_str()
+        .map(|m| m.as_str())
+        .unwrap_or("")
         .to_owned();
 
     AcpiOutput {
